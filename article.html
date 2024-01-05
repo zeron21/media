@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>河南</title>
+    <style>
+        body,html{
+            background-color: #F3F6F7;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            weight:100%;
+            overflow:-Scroll;
+            overflow-x:hidden;
+        }
+
+        #container {
+            display: flex;
+            width: 100%;
+            height:100%;
+        }
+
+        #left-side {
+            position: fixed;
+            width: 250px;
+            height:100rem;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        #profile-box {
+            width: 250px;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ddd;
+
+        }
+
+        #nickname {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        #tags {
+            margin-top: 5px;
+            color: #888;
+        }
+
+        #navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .navigation-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .navigation-item img {
+            margin-right: 5px;
+        }
+
+        #footer {
+            text-align: center;
+            margin-bottom: 100rem;
+            color: #888;
+        }
+
+        #right-side {
+            width: 600px;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom:20px;
+            margin-left:40rem;
+
+        }
+
+        #night-mode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #progress-bar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        #night-mode{
+            position:fixed;
+        }
+        .chart{
+            position:relative;
+            width:930px;
+            height:520px;
+            overflow:hidden;
+
+
+        }
+        .chart iframe{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:none;
+            transform-origin: top left;
+            transform:scale(0.7)
+        }
+
+        /* 设置父级容器的样式 */
+        .iframe-container {
+            width: 600px; /* 固定宽度 */
+            height: 327px; /* 固定高度 */
+            overflow: hidden; /* 隐藏超出显示区域的内容 */
+        }
+
+        /* 设置要缩放的iframe的样式 */
+        .iframe-container iframe {
+            width: 100%; /* 设置宽度为100%以填满父级容器 */
+            height: 100%; /* 设置高度为100%以填满父级容器 */
+            border: none;
+            transform-origin: top left; /* 设置缩放的起点为左上角 */
+            transform:scale(0.69);
+        }
+        .tips{
+            color:gray;
+            font-size:12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="left-side">
+            <div id="profile-box">
+                <img id="profile-image" src="./icons/img.jpg" alt="头像">
+                <div id="nickname">water</div>
+                <div id="tags">读万卷书，行万里路</div>
+            </div>
+            <div id="navigation">
+                <div class="navigation-item">
+                    <img src="./icons/home.png" alt="Home" width="30" height="30">
+                    <span>Home&nbsp</span>
+                </div>
+                <div class="navigation-item">
+                    <img src="./icons/search.png" alt="Search" width="30" height="30">
+                    <span>Search</span>
+                </div>
+                <div class="navigation-item">
+                    <img src="./icons/about.png" alt="About" width="30" height="30">
+                    <span>About &nbsp</span>
+                </div>
+            </div>
+            <div id="footer">
+                <div>© 2023 water</div>
+                <div>网站备案号: 豫ICP备2022000532号</div>
+            </div>
+        </div>
+
+        <div id="right-side">
+
+            <h1>河南人都去哪了？</h1>
+            <p>不知道你有没有这样一种感觉，无论你在哪个城市，无论你在做什么工作，在你的身边总会发现有河南人的身影。</p>
+            <p>以我本人来举例， 我是一个来自河南的学子，之前在杭州上学时就遇到过不少河南的同学，去外面玩的时候也几乎都能偶遇河南老乡，现在在上海这边上学也同样是这样，问了身边其他同学，他们说几乎和我一样，我不免发出疑问：为什么我可以在河南省以外的地方遇到那么多的河南老乡呢？</p>
+            <p>带着这个疑问，我开始找资料，做调查，通过调查发现，大多数人在提到河南时，第一印象大多都是河南人口众多，还有就是农业大省，粮食产量第一等等</p>
+            <p>按照全国第七次人口普查数据，河南的常住人口有9936万人，仅次于广东的1.26亿、山东的1.02亿人，排全国第三位。但同时，一个日益严重的问题是，河南的人口外流非常严重，十年来，河南人口外流趋势更加明显，流动人口规模进一步扩大。</p>
+            <h2>河南流动人口居全国前列</h2>
+            <p>接下来看一组数据</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/bar_line_chart.html" frameborder="0" id="iframe1"></iframe>
+
+            </div>
+            <p class="tips">注：右上角可以放大缩小图表</p>
+            <p>根据第七次全国人口普查数据显示，广东、山东、河南、江苏、四川位列前五人口大省，在流动人口榜单上，河南不出意外的保持前列。</p>
+            <p class="tips">注：流动人口指的是离开户口等级低半年以上的人口，住地与户口不在同一地方。比如：张三是河南商丘的户口，但他去杭州/上海工作/上学半年以上，就等于是杭州/上海的流动人口。</p>
+            <p>其中广东流动人口超5000万人榜一，浙江、江苏、山东、四川、河南超2000万人紧随其后。</p>
+            <p>流动人口有省内流动人口、省外流动人口。省外流动人口是衡量城市吸引力的一个重要指标，即“用脚投票”。</p>
+            <p>上海、北京等一线城市的常住人口中，省外流动人口占比超过30%，浙江、广东等经济大省的常住人口省外流动人口超20%。</p>
+            <p>根据上图数据来看，河南的2120.17万流动人口，但仅有127.35万省外流动人口，省外流动人口占常住人口的1.3，全国倒数第一，甚至不如广西、江西等冷门大省。这意味着河南的流动人口大都是省内城市之间的流动，对省外的吸引力极弱。</p>
+            <p>再来看一下河南省流入人口来源地</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/inflow_pie_chart.html" frameborder="0" id="iframe2"></iframe>
+            </div>
+            <p>这127.35万的省外流动人口，大多数是邻省人口，安徽、山东、河北、湖北四声的流动人口占比排前四。其实，正常情况下，流动人口的第一选择是就近原则，大多数人会选择周边省，但河南例外。</p>
+            <h2>河南流出人口1610万，全国第一</h2>
+            <p>安徽、四川同样突破1000万人，河南、安徽、四川是全国贡献劳动力最多的三大省。</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/outflow_bar_chart.html" frameborder="0"id="iframe3"></iframe>
+            </div>
+            <p class="tips">注：右上角可以放大缩小图表</p>
+            <p>省外流动人口可以知道地方的吸引力，能不能抢到省外的人口。流出人口则映射出能不能留住省内的人口，比较遗憾，河南在这方面还不行。那么问题来了，流出的1610万河南人都去哪了?</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/henan_sankey_chart.html" frameborder="0"id="iframe4"></iframe>
+            </div>
+            <p>河南流出人口去向最多的是广东、浙江、江苏，都超过了200万人，其次是上海、北京、有100万人以上的河南人口。</p>
+            <p>以上几个地方吸引力全国前列，这是可以猜到的结果。但是河南流到其他省份的人口，同样非常夸张。流入新疆、山东、天津、福建和河北的人口也都超多了50万人，总体上看，河南外出人口主要流向了东南沿海地区，尤其是长三角、珠三角和京津冀地区。</p>
+            <p>河南流出人口，遍地开花，去哪都行，起码先出去再说，或许这也是在外奋斗的河南人随处都能进见到河南老乡的原因吧。</p>
+            <p>根据数据显示，全国30多个省市（除河南外）的流入人口，河南都在前列。</p>
+            <p>陕西、陕西、河北、湖北、甘肃、安徽的流入人口中，河南人口第一。</p>
+            <p>北京、天津、新疆、宁夏、青海、山东、四川、江西的流入人口中，河南人口第二；</p>
+            <p>除了内蒙古、贵州两省，河南流入人口排在第六，其余二十八个省河南流入人口均上榜前五。</p>
+            <p>有的河南人去了南方，有的河南人去了周边强省、强市，有的河南人去了偏远的西北。</p>
+            <p>以前有说法全国都是东北人，事实上全国都是河南人才对!</p>
+            <h2>为什么留不住人？</h2>
+            <p>河南人口流出的数据直观的体现出两个问题。</p>
+            <p>一是河南的高考迫使一些河南人口不得不去其他省份</p>
+            <p>关于河南高考，先来看两组数据</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/exam_bar_line_chart.html" frameborder="0" id="iframe5"></iframe>
+            </div>
+            <p class="tips">注：右上角可以放大缩小图表</p>
+            <p>近几年，河南高考人数都超百万人，全国遥遥领先，这个数字比北京、天津、上海、江苏、浙江的高考考生之和还要多，数量差的量级之大瞠目结舌。河南高考考生全国第一，但本科录取率非常低，仅有37%排全国倒数，而北京、天津、上海考生不到10万人，本科录取率高达70%以上，无情的数据差倒逼着一些河南人口流出，去了西藏、天津等地。于是河南流出人口去向前十西藏、天津上榜。</p>
+            <p>二是河南的经济不够发达，郑州还不够强，就业机会少、工资低，无法留住更多的河南人。</p>
+            <p>河南作为中国的人口大省和经济欠发达地区，面临着经济结构单一、传统产业比重过大的问题。同时，省会城市郑州的产业结构升级不足，缺乏战略新兴产业的支撑，导致对人才的吸引力不足。这些问题导致了河南人口的流失，尤其是流向北京、上海、东南沿海省份和周边相对发达的省份如山东、河北。</p>
+            <p>除此之外，河南的人口自然增长已接近停滞，出生人口大幅下降，老龄化趋势加剧，面临人口负增长的风险。在这样的背景下，郑州作为河南唯一有较大人口净增长的城市，对河南的经济和人口流动具有重要意义。</p>
+            <div class="iframe-container">
+                <iframe src="./chart_html/henanMap.html" frameborder="0" id="iframe6"></iframe>
+            </div>
+            <p>根据以上数据，近几年河南省只有郑州的常住人口在增长，但总体人口还是减少趋势，如果郑州能够崛起并成为具有吸引力的城市，将有助于留住河南人才，减少人口外流，并提升河南在全国的竞争力。</p>
+            <p>为了应对这些问题，河南需要积极推动产业结构升级，培育新兴产业，尤其是高新技术产业。同时，集中资源扶持郑州的发展，提升其产业结构和城市吸引力，使其成为能够留住本省人才的城市。此外，通过建设郑州都市圈和其他产业布局，吸引河南人回流，让河南老乡都能够有更多时间留在河南，同时，外出到其他省的老乡发挥河南人在全国各地的作用，为其他区域的发展贡献力量。</p>
+            <p class="tips">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp以上图表数据来源于网络以及各官方统计网站</p>
+        </div>
+    </div>
+
+    <div id="night-mode" onclick="toggleNightMode()">
+        <img src="./icons/moon-icon.png" alt="Night Mode" height="40" width="40">
+    </div>
+
+
+    <script>
+         var iframe1 = document.getElementById('iframe1');
+            iframe1.onload = function() {
+            var doc = iframe1.contentDocument || iframe1.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe1.style.height = contentHeight + 'px';
+            iframe1.style.width = contentWidth + 'px';
+            };
+         var iframe2 = document.getElementById('iframe2');
+            iframe2.onload = function() {
+            var doc = iframe2.contentDocument || iframe2.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe2.style.height = contentHeight + 'px';
+            iframe2.style.width = contentWidth + 'px';
+            };
+         var iframe3 = document.getElementById('iframe3');
+            iframe3.onload = function() {
+            var doc = iframe3.contentDocument || iframe3.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe3.style.height = contentHeight + 'px';
+            iframe3.style.width = contentWidth + 'px';
+            };
+         var iframe4 = document.getElementById('iframe4');
+            iframe4.onload = function() {
+            var doc = iframe4.contentDocument || iframe4.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe4.style.height = contentHeight + 'px';
+            iframe4.style.width = contentWidth + 'px';
+            };
+         var iframe5 = document.getElementById('iframe5');
+            iframe5.onload = function() {
+            var doc = iframe5.contentDocument || iframe5.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe5.style.height = contentHeight + 'px';
+            iframe5.style.width = contentWidth + 'px';
+            };
+         var iframe6 = document.getElementById('iframe6');
+            iframe6.onload = function() {
+            var doc = iframe6.contentDocument || iframe6.contentWindow.document;
+            var contentHeight = doc.body.scrollHeight;
+            var contentWidth = doc.body.scrollWidth;
+            iframe6.style.height = contentHeight + 'px';
+            iframe6.style.width = contentWidth + 'px';
+            };
+
+        function toggleNightMode() {
+            var body = document.body;
+            var moonIcon = document.getElementById('night-mode');
+            var leftSide = document.getElementById('left-side');
+            var rightSide = document.getElementById('right-side');
+
+        if (body.style.backgroundColor === 'rgb(243, 246, 247)') {
+            body.style.backgroundColor = '#22272E';
+            body.style.color = '#fff';
+            moonIcon.innerHTML = '<img src="./icons/sun-icon.png" alt="Day Mode" height="40" width="40">';
+            leftSide.style.backgroundColor = '#2D333B';
+            rightSide.style.backgroundColor = '#2D333B';
+        } else {
+            body.style.backgroundColor = '#F3F6F7';
+            body.style.color = '#000';
+            moonIcon.innerHTML = '<img src="./icons/moon-icon.png" alt="Night Mode" height="40" width="40">';
+
+            leftSide.style.backgroundColor = '#FFFFFF';
+            rightSide.style.backgroundColor = '#FFFFFF';
+        }
+    }
+    </script>
+</body>
+
+</html>
+
